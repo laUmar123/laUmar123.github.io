@@ -78,4 +78,13 @@ const game = function () {
         }
         alert(`The score is wins: ${userScore} - loss: ${computerScore} - ties: ${tie}`); //display the current score after each round
     }
+    //Displays final result after all rounds have been completed
+    alert(`The  final score is wins: ${userScore} - loss: ${computerScore} - ties: ${tie}`);
+    if (userScore > computerScore) {
+        alert(`The user wins ${userScore} - ${computerScore}`);
+    } else if (userScore === computerScore) {
+        alert(`The game is tied ${computerScore} - ${userScore}`);
+    } else {
+        alert(`The computer wins ${computerScore} - ${userScore}`);
+    }
 }
