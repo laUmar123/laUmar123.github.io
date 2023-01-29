@@ -14,3 +14,9 @@ const getComputerChoice = function () {
             return null;
     }
 };
+
+//Function that takes user input
+const getPlayerChoice = function () {
+    let userChoice = prompt("choose rock, paper or scissor");
+    return userChoice;
+};
