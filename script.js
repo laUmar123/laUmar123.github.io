@@ -40,3 +40,16 @@ const verifyPlayerChoice = function (choice) {
     }
     return choice.toLowerCase(); // we can then return choice and make sure it's of lowercase
 };
+
+//A function that will run a single round, with the parameters being the user's choice and the computer's choice
+const playRound = function (playerSelection, computerSelection) {
+    if (playerSelection === "rock" && computerSelection === "scissor"
+        || playerSelection === "paper" && computerSelection === "rock"
+        || playerSelection === "scissor" && computerSelection === "paper") {
+        return (`User won as they chose ${playerSelection} and computer chose ${computerSelection}`); //these are all the possible combinations of the user winning
+    } else if (playerSelection === computerSelection) {
+        return (`The game is a tie as you both have used ${playerSelection}`);
+    } else {
+        return (`Computer won as the computer chose ${computerSelection} and the user chose ${playerSelection}`); //if it isn't a draw or if the user didn't win then the computer wins
+    }
+};
