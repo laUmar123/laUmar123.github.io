@@ -53,3 +53,29 @@ const playRound = function (playerSelection, computerSelection) {
         return (`Computer won as the computer chose ${computerSelection} and the user chose ${playerSelection}`); //if it isn't a draw or if the user didn't win then the computer wins
     }
 };
+
+//Function that executes the entire game, game would be best of 5
+const game = function () {
+    let userScore = 0;
+    let computerScore = 0;
+    let tie = 0;
+    let roundResult = ""; //this will be used to check whether the user or the computer won
+    for (let i = 0; i < 5; i++) { //for loop executes 5 times to make it a best of 5 game
+        let playerChoice = verifyPlayerChoice(getPlayerChoice()); //we get the player choice
+        if (playerChoice === undefined) { //if the player pressed cancel, the verifyPlayerChoice() function would return undefined, in that case we stop the game
+            break;
+        }
+        roundResult = playRound(playerChoice, getComputerChoice()); //play round returns a string based on who won
+        alert(roundResult); //we show that string to the user as an alert
+
+        //this if...else statement compares whether the string starts with user or computer, and from there we know who won that round and we increment the appropriate score
+        if (roundResult.startsWith("User")) {
+            userScore++;
+        } else if (roundResult.startsWith("Computer")) {
+            computerScore++;
+        } else {
+            tie++;
+        }
+        alert(`The score is wins: ${userScore} - loss: ${computerScore} - ties: ${tie}`); //display the current score after each round
+    }
+}
