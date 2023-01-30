@@ -1,12 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Battle of RPS Land</title>
+    <script type="text/javascript" src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <script type="text/javascript" src="script.js"></script>
+    <main>
+        <heading class="title">
+            <h1 class="main-title">The Battle of RPS Land</h1>
+        </heading>
+        <div class="info-buttons">
+            <button class="lore-button lore-rules-buttons"><span class="lore-button-text">Lore</span></button>
+            <button class="rules-button lore-rules-buttons"><span class="rules-button-text">Rules</span></button>
+        </div>
+        <div class="modal-lore hidden">
+            <h3 class="modal-lore-title">The Lore</h3>
+            <p class="modal-lore-text">
+                The year was 6 BC, the town of RPS had be ravaged with plagues and crime. With such an evil filled town,
+                the knights had decided it would be time to destroy the town once and for all. News
+                broke out to the people of RPS and they all gathered to choose a leader to defend this town. With no one
+                willing to step forward, all hope was lost, but there emerged a man; face covered with a red cloth,
+                wearing a shiny white dress.
+                He offered to fight this knight, but made everyone vow to stop the crime in this land, and work with one
+                another. With no other option, the people
+                of RBS accepted his offer, and asked how he would defeat this unformidable knight. He put down a rock, a
+                shield and two swords, and said "no more questions".
+            </p>
+        </div>
+        <div class="modal-rules hidden">
+            <h3 class="modal-rules-title">The Rules</h3>
+            <ol class="modal-rules-text">
+                <li>
+                    You have 3 items: a powerful rock, shield and swords, you must choose between these
+                </li>
+                <li>
+                    The knight will also have access to the same weapons and will choose one of them per round
+                </li>
+                <li>
+                    The powerful rock will beat the sword but be blocked by the shield
+                </li>
+                <li>
+                    The shield will block the powerful rock but swords would destroy the shield
+                </li>
+                <li>
+                    The swords will break the shield but will not be able to block the powerful rock
+                </li>
+                <li>
+                    You and the knight both have 5 lives, the first person to go to 0 lives loses and thus dies
+                </li>
+                <li>
+                    Enjoy! May fortune favour you against this formidable knight.
+                </li>
+            </ol>
+        </div>
+        <div class="modal-win hidden">
+            <h3 class="modal-win-title">You Have Defeated the Knight!</h3>
+            <p class="modal-win-text">
+                The town cheers and everyone circles around you. Everyone is cheering your name and they are all dancing
+                in
+                happiness, your work has been completed and you have saved this town. They offer to make
+                you their king, and swear to never cause trouble again. You collect your weapons that have been damaged
+                during battle, but a small smirk appears on your face knowing you can't be defeated.
+            </p>
+        </div>
+        <div class="modal-loss hidden">
+            <h3 class="modal-loss-title">The Hero Has Been Slain!</h3>
+            <p class="modal-loss-text">
+                Sorrow runs over each person, their fate has been sealed and they scream in fear, the knight picks his
+                sword
+                that has been impaled into your body, and lets out a loud demonic laughter. Everyone flees
+                but they all know they have no where to run, the knight takes the final steps in this future
+                non-existant
+                town.
+            </p>
+        </div>
+        <div class="game-section">
+            <div class="user-side">
+                <h2 class="weapon-heading">Choose your weapon:</h2>
+                <div class="weapons-user weapons">
+                    <div class="button-rock-hero weapon-select weapon-select-user" id="rock-hero">
+                        <img src="rock.png" alt="magical red rock that looks like a crystal">
+                    </div>
+                    <div class="button-shield-hero weapon-select weapon-select-user">
+                        <img src="hero-shield-removebg-preview.png">
+                    </div>
+                    <div class="button-sword-hero weapon-select weapon-select-user">
+                        <img src="hero-sword-removebg-preview.png">
+                    </div>
+                </div>
+            </div>
+            <div class="game-information">
+                <div class="information">
+                    <h5 class="user-lives">Remaining Lives: 5</h5>
+                    <h5 class="round">Round: 0</h5>
+                    <h5 class="computer-lives">Knight Remaining Lives: 5</h5>
+                </div>
+                <hr>
+                <div class="round-commentary">
+                    <p class="round-text"></p>
+                </div>
+            </div>
+            <div class="computer-side">
+                <h2 class="weapon-heading">Enemy Choice:</h2>
+                <div class="weapons-computer weapons">
+                    <div class="button-rock-enemy weapon-select">
+                        <img src="enemy-rock-removebg-preview.png" alt="magical red rock that looks like a crystal">
+                    </div>
+                    <div class="button-shield-enemy weapon-select">
+                        <img src="enemy-shield-removebg-preview.png">
+                    </div>
+                    <div class="button-sword-enemy weapon-select">
+                        <img src="enemy-sword-removebg-preview.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="play-again-button-container">
+            <button class="play-again-button">Play Again!</button>
+        </div>
+        <footer>
+            <p>Developed by: laUmar123</p>
+        </footer>
+    </main>
 </body>
+
 </html>

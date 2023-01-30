@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'MedievalSharp', cursive;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('background-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-title {
+    font-size: 75px;
+}
+
+.info-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    gap: 70px;
+}
+
+.lore-rules-buttons {
+    width: 125px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+.lore-rules-buttons:hover {
+    cursor: pointer;
+    background-color: #7c142c;
+    color: white;
+}
+
+.lore-button-text,
+.rules-button-text {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.modal-lore,
+.modal-rules {
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 1;
+    justify-content: center;
+    gap: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 30px;
+}
+
+.modal-rules {
+    padding: 50px;
+}
+
+.modal-lore-title,
+.modal-rules-title {
+    font-size: 40px;
+    align-self: center;
+}
+
+.modal-lore-text,
+.modal-rules-text {
+    font-size: 25px;
+}
+
+.game-section {
+    min-height: 500px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.user-side,
+.computer-side {
+    width: 500px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 20px;
+    min-height: 720px;
+}
+
+.user-side {
+    background-color: #972521;
+}
+
+.computer-side {
+    background-color: #450c7a;
+}
+
+.weapon-heading {
+    font-size: 30px;
+    color: white;
+}
+
+img {
+    width: 150px;
+    height: auto;
+}
+
+.weapon-select {
+    border: 2px solid black;
+    border-radius: 30px;
+    background-color: wheat;
+}
+
+.weapons {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.weapon-select-user:hover {
+    cursor: pointer;
+    background-color: #7c142c;
+    transform: scale(1.1);
+}
+
+.weapon-select-enemy {
+    background-color: black;
+    transform: scale(1.1);
+}
+
+.game-information {
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 800px;
+    min-height: 200px;
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+}
+
+.information {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 20px;
+}
+
+hr {
+    background-color: black;
+    height: 1px;
+}
+
+.round-commentary {
+    padding: 10px;
+}
+
+.round-text {
+    font-size: 20px;
+}
+
+.selected-weapon {
+    background-color: #7c142c;
+    transform: scale(1.1);
+}
+
+.losing-screen {
+    background-image: url('losing-screen.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.winning-screen {
+    background-image: url('winning-screen.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.play-again-button-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.play-again-button {
+    width: 200px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 30px;
+    font-weight: 500;
+
+}
+
+.play-again-button:hover {
+    cursor: pointer;
+    background-color: #7c142c;
+    color: white;
+}
+
+footer {
+    background-color: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 25px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer>p {
+    font-size: 18px;
+}
+
+.modal-win {
+    background-color: #7c142c;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 1;
+    justify-content: center;
+    gap: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 30px;
+}
+
+.modal-loss {
+    background-color: #450c7a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 1;
+    justify-content: center;
+    gap: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 30px;
+}
+
+.modal-win,
+.modal-loss {
+    margin-bottom: 50px;
+}
+
+.modal-win-title,
+.modal-loss-title {
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+
+.modal-win-text,
+.modal-loss-text {
+    font-size: 25px;
+}
+
+.hidden {
+    display: none;
+}
